@@ -31,8 +31,10 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(reverse_rec([1,2,3]), [3,2,1])
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
-            max_list_iter(tlist)
+            reverse_rec(tlist)
         """If empty list is passed None is returned."""
+        self.assertEqual(reverse_rec([3]) , [3])
+        """If list has one element"""
         self.assertEqual(reverse_rec([]) , None)
         """Reverses list with different elements."""
         self.assertEqual(reverse_rec([1,2,3,4]) ,[4,3,2,1])
