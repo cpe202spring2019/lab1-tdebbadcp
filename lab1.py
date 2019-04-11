@@ -9,7 +9,7 @@ def max_list_iter(int_list):  # must use iteration not recursion
    else:
       max = int_list[0]
       for i in int_list:
-         if i >= max:
+         if i > max:
             max = i
       return max
 
@@ -20,7 +20,7 @@ def reverse_rec(int_list):   # must use recursion
    if int_list == None:
       raise ValueError
    elif int_list == []:
-      return None
+      return []
    else:
       if len(int_list) == 1:
          return int_list
