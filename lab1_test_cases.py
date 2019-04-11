@@ -57,6 +57,11 @@ class TestLab1(unittest.TestCase):
         list_val = None
         with self.assertRaises(ValueError):  # used to check for exception
             bin_search(4, 0, 5, list_val)
+        """If list passed is empty"""
+        list_val =[]
+        low = 0
+        high = len(list_val) - 1
+        self.assertEqual(bin_search(0, 0, len(list_val)-1, list_val), [])
         """If target is the first element of list."""
         list_val =[0,1,2,3,4]
         low = 0
